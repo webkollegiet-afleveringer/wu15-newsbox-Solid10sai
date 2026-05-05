@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-
+import "./home.scss";
 const API_URL = ("https://api.nytimes.com/svc/news/v3/content/nyt/world.json?api-key=yourkey")
 
 
