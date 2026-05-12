@@ -13,9 +13,12 @@ export default function Home(){
   }, []);
 
   return (
-    <div>
+    <body>
+        
+    <div className="header">
       <h1>Velkommen til nyhedssiden</h1>
       {/* Her mapper du over dine nyheder */}
     </div>
+    </body>
   );
 }
