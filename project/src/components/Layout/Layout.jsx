@@ -1,14 +1,33 @@
-import { Outlet } from "react-router";
+import {useEffect } from "react";
+import { Link, Outlet, useLocation  } from "react-router";
+import './Layout.scss';
 
 export default function Layout() {
+  const location = useLocation();
+
+  useEffect(() => {
+  console.log(location);
+}, [location]);
+  
   return (
-    <div className="main-layout">
-      
-        <header>
-            
+    
+      <>
+        <header className="appHeader">
+            <Link to="/" className="appHeader__brandLink">Newsify</Link>
+            {location.pathname === "/" && <p>Søgebar</p>}
         </header>
 
         <Outlet />
-    </div>
+        <nav>
+          <ul>
+            <li>
+              <Link to= "/">Home</Link>
+            </li>
+            <li>
+              <Link to= "/settings">Settings</Link>
+            </li>
+          </ul>
+        </nav>
+      </>
   );
 }

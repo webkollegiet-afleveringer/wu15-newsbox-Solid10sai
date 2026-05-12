@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react-router";
+
 export default function Settings() {
     function inputHandler(event) {
         console.log(event.target.checked);
