@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react-router";
+import { useState } from "react-router";
 
 export default function Settings() {
     function inputHandler(event) {
